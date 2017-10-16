@@ -72,6 +72,9 @@
           <td>
           {{if (String(it.stats.pools[pool].name).startsWith("zcash")) { }}
           <a href="https://explorer.zcha.in/tx/{{=it.stats.pools[pool].payments[p].txid}}"  title="View transaction" target="_blank">{{=it.stats.pools[pool].payments[p].blocks}}</a>
+          {{ } else if (String(it.stats.pools[pool].name).startsWith("bitcoinz")) { }}
+            <a href="https://bitcoinz.ph/tx/{{=it.stats.pools[pool].payments[p].txid}}"  title="View transaction" target="_blank">{{=it.stats.pools[pool].payments[p].blocks}}</a>
+
           {{ } else if (String(it.stats.pools[pool].name).startsWith("zclassic")) { }}
             <a href="https://classic.zcha.in/tx/{{=it.stats.pools[pool].payments[p].txid}}"  title="View transaction" target="_blank">{{=it.stats.pools[pool].payments[p].blocks}}</a>
           {{ } else if (String(it.stats.pools[pool].name).startsWith("hush")) { }}
